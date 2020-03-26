@@ -1,5 +1,6 @@
 var jsforce = require('jsforce');
 
+//decided not to use this module to make code samples easier
 module.exports = {
     openSession: async function (username, password, url) {
         return new Promise((resolve, reject)=> {

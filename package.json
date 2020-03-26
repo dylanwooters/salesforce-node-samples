@@ -2,13 +2,15 @@
   "name": "salesforce-node",
   "version": "1.0.0",
   "description": "Sample salesforce integration for EP blog.",
-  "main": "app.js",
+  "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dylan Wooters",
   "license": "MIT",
   "dependencies": {
-    "jsforce": "^1.9.3"
+    "express": "^4.17.1",
+    "jsforce": "^1.9.3",
+    "socket.io": "^2.3.0"
   }
 }
