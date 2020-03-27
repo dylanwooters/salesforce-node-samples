@@ -80,15 +80,6 @@ async function run(){
             console.log('listening on *:3000');
         });
 
-        //connect to Salesforce
-        let creds = JSON.parse(fs.readFileSync(path.resolve(__dirname,'./salesforce-creds.json')).toString());
-        let conn = new jsforce.Connection({ loginUrl : creds.url });
-        try {
-            await conn.login(creds.username, creds.password);
-        } catch (err) {
-            console.error(err);
-        }
-
         //when the client connects, emit streaming updates from salesforce to client
         io.on("connection", (socket) => {
         console.log('A socket connection was made!');
